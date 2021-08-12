@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+      <a-scene background="color:#FFFFFF">
+        <a-camera ></a-camera>
+
+        </a-camera>
+      
+        <a-entity>
+          <a-plane  height="100" width="100" rotation="-90 0 0" color="green">
+            
+          
+          </a-plane>
+        </a-entity>
+        <a-entity>
+          <a-sphere position="-2 2.0 -4" rotation="360 0 0" color="#4CC3D9" src="earth.jpg" light="type: spot; color: white,castShadow:true,recieve:false,decay=2,intensity=10,shadowCameraVisible: true">
+            <a-torus color="grey" radius="1.2"  radius-tubular="0.015" segments-tubular="1000"  rotation="60 0 0 ">
+            </a-torus>
+          <a-torus color="grey" radius="1.2" rotation="90 0 0 " radius-tubular="0.015" segments-tubular="1000">
+          </a-torus>
+          <a-torus color="grey" radius="1.2" rotation="-180 0 0 " radius-tubular="0.015" segments-tubular="1000">
+          </a-torus>
+          <a-torus color="grey" radius="1.2"  radius-tubular="0.015" segments-tubular="1000"  rotation="-60 0 0 ">
+          </a-torus>
+        
+          </a-sphere>
+
+          <a-entity id="lightSphere" geometry="primitive: sphere; radius:0.1" material="shader: flat"   light="type: spot; color: white,castShadow:true,recieve:false,decay=2,intensity=10,shadowCameraVisible: true" position="-5 7 1"
+          animation="property: rotation; to: -5 -90 7; dir: alternate; loop: true" ></a-entity>
+        </a-entity>
+        <a-entity>
+          <a-cone color="grey" radius-bottom="0.9" position="-2.5 0.6 -5"></a-cone>
+        </a-entity>
+       
+        <a-entity>
+          <a-entity id="lightSphere" geometry="primitive: sphere; radius:0.1" material="shader: flat"   light="type: point; color: white,castShadow:true,recieve:false,decay=2,intensity=10,shadowCameraVisible: true" position="-5 7 1"
+          animation="property: rotation; to: -5 -90 7; dir: alternate; loop: true" ></a-entity>
+          <a-cylinder color="crimson" height="10" radius="1.5" position="1 0 -10"></a-cylinder>
+          <a-cylinder color="yellow" height="10" radius="1.5" position="14 0 -16"></a-cylinder>
+          <a-cylinder color="blue" height="10" radius="1.5" position="6 0 -12"></a-cylinder>
+        </a-entity>
+    </a-scene>
+
+  </body>
+  </html>
